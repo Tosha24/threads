@@ -12,8 +12,8 @@ async function Page() {
     
   if (!userInfo?.onboarded) redirect("/onboarding");
 
-  // TODO: Fetch multiple users
   const result = await fetchUsers({ userId: user.id, searchString: '', pageNumber: 1, pageSize: 25})
+  
   return (
     <section>
       <h1 className="head-text mb-10">Search</h1>
